@@ -4,22 +4,26 @@ import com.example.jwt.dto.SignupDTO;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.transaction.annotation.Transactional;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-@Transactional
+//@Transactional
 @SpringBootTest
 class SignupServiceTest {
 
     @Autowired
     private SignupService signupService;
 
+    @Autowired
+    private PasswordEncoder passwordEncoder;
+
     @Test
     void signupProcess(){
         //given
         SignupDTO signupDTO = new SignupDTO();
-        signupDTO.setEmail("asd123@naver.com");
+        signupDTO.setEmail("asd1234@naver.com");
         signupDTO.setPassword("1234");
         String successMessage = "성공!";
 
@@ -37,4 +41,6 @@ class SignupServiceTest {
     @Test
     void existByEmail() {
     }
+
+
 }

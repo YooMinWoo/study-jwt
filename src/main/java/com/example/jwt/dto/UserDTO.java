@@ -1,21 +1,18 @@
-package com.example.jwt.vo;
+package com.example.jwt.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.RequiredArgsConstructor;
 import lombok.Setter;
-
-import java.util.List;
 
 @Getter
 @Setter
 @AllArgsConstructor
-public class User {
-    private Long id;
+public class UserDTO {
     private String email;
     private String password;
     private String role;
 
-    public User() {
+    public UserDTO() {
+
     }
 }

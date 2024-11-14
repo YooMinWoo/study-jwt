@@ -2,9 +2,9 @@ package com.example.jwt.service;
 
 import com.example.jwt.dto.SignupDTO;
 import com.example.jwt.mapper.UserMapper;
-import com.example.jwt.security.config.PasswordEncoderConfig;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -28,6 +28,6 @@ public class SignupService {
     }
 
     public boolean existByEmail(String email){
-        return userMapper.findEmail(email) != null;
+        return userMapper.findByEmail(email) != null;
     }
 }

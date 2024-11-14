@@ -5,5 +5,8 @@ spring:
     username: root
     password: localhost
 
+  jwt:
+    secret: asdfasdfasdfasdfasdfasdfqwqweqwerraasdfergghrqfqegrghs
+
 mybatis:
   mapper-locations: classpath:mapper/*.xml

@@ -6,7 +6,9 @@ import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
 public interface UserMapper {
-    User findEmail(String email);
+    User findByEmail(String email);
 
     void signup(SignupDTO signupDTO);
+
+    String getPassword(String email);
 }
